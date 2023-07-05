@@ -24,11 +24,12 @@ class Array
   #
   # ==== Examples
   #
-  #   [1, 2, 3, 4, 5].mean  #=> 3.0
-  #   [1.0, 2.0, 3.0].mean  #=> 2.0
+  #     [1, 2, 3, 4, 5].mean  #=> 3.0
+  #     [1.0, 2.0, 3.0].mean  #=> 2.0
   def mean
-    sum.to_f / length
+    sum.to_f / size
   end
+  alias_method :average, :mean
 
   # Returns the variance of the array of +Numeric+.
   #
