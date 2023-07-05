@@ -2,6 +2,13 @@
 
 `rb_core_extensions` is a set of core extensions beyond those provided by `Ruby` and `ActiveSupport`.
 
+[![Ruby](https://github.com/shivam091/core_extensions/actions/workflows/main.yml/badge.svg)](https://github.com/shivam091/rb_core_extensions/actions/workflows/main.yml)
+[![Gem Version](https://badge.fury.io/rb/rb_core_extensions.svg)](https://badge.fury.io/rb/rb_core_extensions)
+[![Gem Downloads](https://img.shields.io/gem/dt/rb_core_extensions.svg)](http://rubygems.org/gems/rb_core_extensions)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/592b82a5336ee551a8f1/test_coverage)](https://codeclimate.com/github/shivam091/core_extensions/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/592b82a5336ee551a8f1/maintainability)](https://codeclimate.com/github/shivam091/core_extensions/maintainability)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/shivam091/core_extensions/blob/main/LICENSE.txt)
+
 ## Minimum Requirements
 
 * Ruby 3.2.2+ (https://www.ruby-lang.org/en/downloads/branches/)
