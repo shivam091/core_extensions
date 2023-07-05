@@ -69,6 +69,15 @@ Below are the extension methods which are provided by `rb_core_extensions`. Plea
   3. **[`include_all?`](https://shivam091.github.io/core_extensions/Array.html#method-i-include_all-3F)** - Returns whether the array contains all of the `elements`.
   4. **[`includes_index?`](https://shivam091.github.io/core_extensions/Array.html#method-i-includes_index-3F)** - Returns whether the array has a value at the specified `index`.
 
+### Hash
+
+* ***core_extensions/hash/inclusion.rb***
+  1. **[`#keys?`](https://shivam091.github.io/core_extensions/Hash.html#method-i-keys-3F)** - Returns whether the hash contains all of the specified `keys`.
+* ***core_extensions/hash/access.rb***
+  1. **[`#keys_at`](https://shivam091.github.io/core_extensions/Hash.html#method-i-keys_at)** - Returns the array of keys of an occurrence of given `values`.
+* ***core_extensions/hash/delete.rb***
+  1. **[`#slice!`](https://shivam091.github.io/core_extensions/Hash.html#method-i-slice-21)** - Alters the hash by keeping only specified `keys` and returns it.
+
 ## Contributing
 
 1. Fork it
