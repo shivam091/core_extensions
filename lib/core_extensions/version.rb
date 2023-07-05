@@ -2,6 +2,6 @@
 # -*- frozen_string_literal: true -*-
 # -*- warn_indent: true -*-
 
-module CoreExtensions
-  VERSION = "0.1.0"
+module CoreExtensions #:nodoc:
+  VERSION = "0.1.1"
 end
