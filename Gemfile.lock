@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     rb_core_extensions (0.1.1)
-      activesupport
+      activesupport (~> 7.0)
 
 GEM
   remote: https://rubygems.org/
@@ -48,7 +48,7 @@ DEPENDENCIES
   rake (~> 13.0)
   rb_core_extensions!
   rspec (~> 3.0)
-  simplecov (>= 0.21.2)
+  simplecov (~> 0.21, >= 0.21.2)
 
 BUNDLED WITH
    2.4.10

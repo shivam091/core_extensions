@@ -31,7 +31,7 @@ Or otherwise simply install it yourself as:
 
 ### Usage
 
-Loading all core extensions:
+Loading all core extensions at once:
 
 ```ruby
 require "core_extensions/all"
@@ -47,7 +47,7 @@ require "core_extensions/date"
 
 ## Extensions Provided
 
-Below are the extension methods which are provided by `core_extensions`. Please refer [documentation](https://shivam091.github.io/core_extensions) or rspec for examples of how to use these methods.
+Below are the extension methods which are provided by `rb_core_extensions`. Please refer [documentation](https://shivam091.github.io/core_extensions) or rspec for examples of how to use these methods.
 
 ### Array
 
