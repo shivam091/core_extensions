@@ -1,4 +1,6 @@
-# frozen_string_literal: true
+# -*- encoding: utf-8 -*-
+# -*- frozen_string_literal: true -*-
+# -*- warn_indent: true -*-
 
 require_relative "lib/core_extensions/version"
 
@@ -31,7 +33,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "activesupport"
+  spec.add_runtime_dependency "activesupport", "~> 7.0"
 
-  spec.add_development_dependency "simplecov", ">= 0.21.2"
+  spec.add_development_dependency "simplecov", "~> 0.21", ">= 0.21.2"
 end

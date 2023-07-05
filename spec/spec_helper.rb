@@ -8,7 +8,7 @@ require "simplecov"
 SimpleCov.start
 
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "core_extensions"
+require "core_extensions/all"
 
 RSpec.configure do |config|
   config.color = true

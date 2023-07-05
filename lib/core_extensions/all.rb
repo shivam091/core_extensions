@@ -2,6 +2,4 @@
 # -*- frozen_string_literal: true -*-
 # -*- warn_indent: true -*-
 
-module CoreExtensions #:nodoc:
-  VERSION = "0.1.1"
-end
+require "core_extensions/array"
