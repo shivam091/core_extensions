@@ -1,4 +1,4 @@
-## [0.1.1](https://github.com/shivam091/core_extensions/compare/main...0.1.1) - 2023-07-05
+## [0.1.1](https://github.com/shivam091/core_extensions/compare/v0.1.0...v0.1.1) - 2023-07-05
 
 ### What's new
 
