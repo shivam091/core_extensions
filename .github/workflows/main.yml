@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
+      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
     name: Ruby ${{ matrix.ruby }}
     strategy:
       matrix:
@@ -25,3 +26,5 @@ jobs:
         bundler-cache: true
     - name: Run test cases
       run: bundle exec rake
+    - name: Publish code coverage
+      uses: paambaati/codeclimate-action@v4.0.0
