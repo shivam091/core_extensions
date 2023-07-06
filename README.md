@@ -80,7 +80,7 @@ Below are the extension methods which are provided by `rb_core_extensions`. Plea
 
 ### [NilClass](https://shivam091.github.io/core_extensions/NilClass.html)
 
-### ***core_extensions/nil_class***
+#### ***core_extensions/nil_class***
 1. **[`#blank?`](https://shivam091.github.io/core_extensions/NilClass.html#method-i-blank-3F)** - Returns `true` when invoked on `nil`.
 
 ### [Object](https://shivam091.github.io/core_extensions/Object.html)
@@ -94,6 +94,13 @@ Below are the extension methods which are provided by `rb_core_extensions`. Plea
 
 #### ***core_extensions/module.rb***
 1. **[`#namespaces`](https://shivam091.github.io/core_extensions/Module.html#method-i-namespaces)** - Returns an `Array` with the namespaces to the current `Module`.
+
+### [Class](https://shivam091.github.io/core_extensions/Class.html)
+
+#### ***core_extensions/class.rb***
+1. **[`#hierarchy`](https://shivam091.github.io/core_extensions/Class.html#method-i-hierarchy)** - Returns a tree-like `Hash` structure of all descendants.
+2. **[`#lineage`](https://shivam091.github.io/core_extensions/Class.html#method-i-lineage)** - Returns an `Array` of all superclasses.
+3. **[`#leaf_subclasses`](https://shivam091.github.io/core_extensions/Class.html#method-i-leaf_subclasses)** - Returns an `Array` of all descendants which have no subclasses.
 
 ## Contributing
 
