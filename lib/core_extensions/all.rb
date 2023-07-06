@@ -4,3 +4,7 @@
 
 require "core_extensions/array"
 require "core_extensions/hash"
+require "core_extensions/nil_class"
+
+require "core_extensions/object"
+require "core_extensions/module"
