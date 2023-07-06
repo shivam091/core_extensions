@@ -27,4 +27,4 @@ jobs:
     - name: Run test cases
       run: bundle exec rake
     - name: Publish code coverage
-      uses: paambaati/codeclimate-action@v4.0.0
+      uses: paambaati/codeclimate-action@v5.0.0
