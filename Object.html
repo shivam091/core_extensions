@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Object - ActiveSupportExtended</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">BasicObject
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-i-deep_send">#deep_send</a>
+    <li ><a href="#method-i-in_namespace-3F">#in_namespace?</a>
+    <li ><a href="#method-i-is_one_of-3F">#is_one_of?</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Object">
+  <h1 id="class-Object" class="class">
+    class Object
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-deep_send" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">deep_send</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Invokes the specified methods continuously, unless encountering a <code>nil</code> value.</p>
+
+<h4 id="method-i-deep_send-label-Examples">Examples<span><a href="#method-i-deep_send-label-Examples">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre class="ruby"><span class="ruby-value">10</span>.<span class="ruby-identifier">deep_send</span>(<span class="ruby-string">&quot;to_s.length&quot;</span>)      <span class="ruby-comment"># =&gt; 2</span>
+<span class="ruby-value">10</span>.<span class="ruby-identifier">deep_send</span>(<span class="ruby-string">&quot;to_s&quot;</span>, <span class="ruby-string">&quot;length&quot;</span>)   <span class="ruby-comment"># =&gt; 2</span>
+<span class="ruby-value">10</span>.<span class="ruby-identifier">deep_send</span>(<span class="ruby-value">:to_s</span>, <span class="ruby-value">:length</span>)     <span class="ruby-comment"># =&gt; 2</span>
+<span class="ruby-value">10</span>.<span class="ruby-identifier">deep_send</span>([<span class="ruby-string">&quot;to_s&quot;</span>, <span class="ruby-string">&quot;length&quot;</span>]) <span class="ruby-comment"># =&gt; 2</span>
+[].<span class="ruby-identifier">deep_send</span>(<span class="ruby-string">&quot;first.length&quot;</span>)     <span class="ruby-comment"># =&gt; nil</span>
+</pre>
+
+          <div class="method-source-code" id="deep_send-source">
+            <pre><span class="ruby-comment"># File core_extensions/object.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">deep_send</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">dup</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;.&#39;</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">args</span>
+
+  <span class="ruby-identifier">arg</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">arg</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">deep_send</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-in_namespace-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">in_namespace?</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Returns whether or not the object is in the given namespace.</p>
+
+<h4 id="method-i-in_namespace-3F-label-Arguments">Arguments<span><a href="#method-i-in_namespace-3F-label-Arguments">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>val</code> - The object to be checked in the namespace.</p>
+</li></ul>
+
+<h4 id="method-i-in_namespace-3F-label-Examples">Examples<span><a href="#method-i-in_namespace-3F-label-Examples">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre class="ruby"><span class="ruby-constant">Aaa</span><span class="ruby-operator">::</span><span class="ruby-constant">Bbb</span><span class="ruby-operator">::</span><span class="ruby-constant">Ccc</span><span class="ruby-operator">::</span><span class="ruby-constant">Ddd</span>.<span class="ruby-identifier">in_namespace?</span>(<span class="ruby-constant">Aaa</span><span class="ruby-operator">::</span><span class="ruby-constant">Bbb</span>)           <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-constant">Aaa</span><span class="ruby-operator">::</span><span class="ruby-constant">Bbb</span><span class="ruby-operator">::</span><span class="ruby-constant">Ccc</span><span class="ruby-operator">::</span><span class="ruby-constant">Ddd</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">in_namespace?</span>(<span class="ruby-constant">Aaa</span><span class="ruby-operator">::</span><span class="ruby-constant">Bbb</span>)       <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-constant">Aaa</span><span class="ruby-operator">::</span><span class="ruby-constant">Bbb</span><span class="ruby-operator">::</span><span class="ruby-constant">Ccc</span><span class="ruby-operator">::</span><span class="ruby-constant">Eee</span>.<span class="ruby-identifier">in_namespace?</span>(<span class="ruby-string">&quot;Aaa::Bbb&quot;</span>)         <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-constant">Aaa</span><span class="ruby-operator">::</span><span class="ruby-constant">Bbb</span><span class="ruby-operator">::</span><span class="ruby-constant">Ccc</span><span class="ruby-operator">::</span><span class="ruby-constant">Eee</span>.<span class="ruby-identifier">in_namespace?</span>(<span class="ruby-constant">Aaa</span><span class="ruby-operator">::</span><span class="ruby-constant">Bbb</span><span class="ruby-operator">::</span><span class="ruby-constant">Ccc</span><span class="ruby-operator">::</span><span class="ruby-constant">Ddd</span>) <span class="ruby-comment">#=&gt; false</span>
+</pre>
+
+          <div class="method-source-code" id="in_namespace-3F-source">
+            <pre><span class="ruby-comment"># File core_extensions/object.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">in_namespace?</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">namespaces</span> = <span class="ruby-identifier">val</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;::&quot;</span>)
+  <span class="ruby-identifier">namespaces</span> <span class="ruby-operator">==</span> (<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Module</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">namespaces</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">namespaces</span>)[<span class="ruby-value">0</span>, <span class="ruby-identifier">namespaces</span>.<span class="ruby-identifier">length</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-is_one_of-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">is_one_of?</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Returns <code>true</code> if the receiver object is an instance of at least one of the classes specified by <code>args</code>. This method is similar to <a href="https://www.rubydoc.info/stdlib/core/Object#is_a%3F-instance_method">Object#is_a?</a>, but it accepts multiple arguments.</p>
+
+<h4 id="method-i-is_one_of-3F-label-Arguments">Arguments<span><a href="#method-i-is_one_of-3F-label-Arguments">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>args</code> - The classes to check against. One or more classes can be passed. Each argument represents a class that the object will be checked against.</p>
+</li></ul>
+
+<h4 id="method-i-is_one_of-3F-label-Examples">Examples<span><a href="#method-i-is_one_of-3F-label-Examples">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre class="ruby"><span class="ruby-value">1</span>.<span class="ruby-identifier">is_one_of?</span>(<span class="ruby-constant">Numeric</span>, <span class="ruby-constant">TrueClass</span>)     <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-keyword">true</span>.<span class="ruby-identifier">is_one_of?</span>(<span class="ruby-constant">Numeric</span>, <span class="ruby-constant">TrueClass</span>)  <span class="ruby-comment">#=&gt; true</span>
+<span class="ruby-keyword">false</span>.<span class="ruby-identifier">is_one_of?</span>(<span class="ruby-constant">Numeric</span>, <span class="ruby-constant">TrueClass</span>) <span class="ruby-comment">#=&gt; false</span>
+</pre>
+
+<h4 id="method-i-is_one_of-3F-label-Returns">Returns<span><a href="#method-i-is_one_of-3F-label-Returns">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>(Boolean)</p>
+
+          <div class="method-source-code" id="is_one_of-3F-source">
+            <pre><span class="ruby-comment"># File core_extensions/object.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_one_of?</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-identifier">is_a?</span>(<span class="ruby-identifier">arg</span>) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
