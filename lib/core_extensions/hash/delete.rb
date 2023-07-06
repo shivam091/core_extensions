@@ -12,8 +12,8 @@ class Hash
   #
   # ==== Examples
   #
-  #     {name: 'John', age: 30, occupation: 'Engineer', gender: 'Male'}.slice!(:name, :age)  #=> {name: 'John', age: 30}
-  #     {name: 'John', age: 30, occupation: 'Engineer', gender: 'Male'}.slice!(:address)     #=> {}
+  #   {name: 'John', age: 30, occupation: 'Engineer', gender: 'Male'}.slice!(:name, :age) #=> {name: 'John', age: 30}
+  #   {name: 'John', age: 30, occupation: 'Engineer', gender: 'Male'}.slice!(:address)    #=> {}
   def slice!(*keys)
     keep_if { |key, _| keys.include?(key) }
   end

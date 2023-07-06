@@ -10,11 +10,11 @@ class Hash
   #
   # * +values+ - +values+ for which keys are to be retrieved.
   #
-  # ==== Examples:
+  # ==== Examples
   #
-  #     {a: 1, b: 2}.keys_at(1, 2)  #=> [:a, :b]
-  #     {a: 1, b: 2}.keys_at(1, 3)  #=> [:a]
-  #     {a: 1, b: 2}.keys_at(3)     #=> []
+  #   {a: 1, b: 2}.keys_at(1, 2) #=> [:a, :b]
+  #   {a: 1, b: 2}.keys_at(1, 3) #=> [:a]
+  #   {a: 1, b: 2}.keys_at(3)    #=> []
   def keys_at(*values)
     select { |_, value| values.include?(value) }.keys
   end

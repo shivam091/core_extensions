@@ -11,9 +11,9 @@ class Array
   #
   # ==== Examples
   #
-  #   [1, 2, 3].include_any?(1, 2)  #=> true
-  #   [1, 2, 3].include_any?(1, 4)  #=> true
-  #   [1, 2, 3].include_any?(4, 5)  #=> false
+  #   [1, 2, 3].include_any?(1, 2) #=> true
+  #   [1, 2, 3].include_any?(1, 4) #=> true
+  #   [1, 2, 3].include_any?(4, 5) #=> false
   def include_any?(*elements)
     elements = elements.first if elements.length == 1 && elements.first.kind_of?(Array)
     !(self & elements).empty?
@@ -27,9 +27,9 @@ class Array
   #
   # ==== Examples
   #
-  #   [1, 2, 3].include_none?(1, 2)  #=> false
-  #   [1, 2, 3].include_none?(1, 4)  #=> false
-  #   [1, 2, 3].include_none?(4, 5)  #=> true
+  #   [1, 2, 3].include_none?(1, 2) #=> false
+  #   [1, 2, 3].include_none?(1, 4) #=> false
+  #   [1, 2, 3].include_none?(4, 5) #=> true
   def include_none?(*elements)
     elements = elements.first if elements.length == 1 && elements.first.kind_of?(Array)
     (self & elements).empty?
@@ -43,9 +43,9 @@ class Array
   #
   # ==== Examples
   #
-  #   [1, 2, 3].include_all?(1, 2)  #=> true
-  #   [1, 2, 3].include_all?(1, 4)  #=> false
-  #   [1, 2, 3].include_all?(4, 5)  #=> false
+  #   [1, 2, 3].include_all?(1, 2) #=> true
+  #   [1, 2, 3].include_all?(1, 4) #=> false
+  #   [1, 2, 3].include_all?(4, 5) #=> false
   def include_all?(*elements)
     elements = elements.first if elements.length == 1 && elements.first.kind_of?(Array)
     (elements - self).empty?
@@ -59,8 +59,8 @@ class Array
   #
   # ==== Examples
   #
-  #   [1, 2, 3].includes_index?(-4)  #=> false
-  #   [1, 2, 3].includes_index?(-3)  #=> true
+  #   [1, 2, 3].includes_index?(-4) #=> false
+  #   [1, 2, 3].includes_index?(-3) #=> true
   #   [1, 2, 3].includes_index?(1)  #=> true
   #   [1, 2, 3].includes_index?(2)  #=> true
   #   [1, 2, 3].includes_index?(3)  #=> false
