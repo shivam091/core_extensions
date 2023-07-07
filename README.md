@@ -78,10 +78,23 @@ Below are the extension methods which are provided by `rb_core_extensions`. Plea
 #### ***core_extensions/hash/delete.rb***
 1. **[`#slice!`](https://shivam091.github.io/core_extensions/Hash.html#method-i-slice-21)** - Alters the hash by keeping only specified `keys` and returns it.
 
+### [TrueClass](https://shivam091.github.io/core_extensions/TrueClass.html)
+
+#### ***core_extensions/true_class.rb***
+1. **[`#to_i`](https://shivam091.github.io/core_extensions/TrueClass.html#method-i-to_i)** - Returns `1` if invoked on `TrueClass` instance.
+2. **[`#to_b`](https://shivam091.github.io/core_extensions/TrueClass.html#method-i-to_b)** - Returns `true` if invoked on `TrueClass` instance.
+
+### [FalseClass](https://shivam091.github.io/core_extensions/FalseClass.html)
+
+#### ***core_extensions/false_class.rb***
+1. **[`#to_i`](https://shivam091.github.io/core_extensions/FalseClass.html#method-i-to_i)** - Returns `0` if invoked on `FalseClass` instance.
+2. **[`#to_b`](https://shivam091.github.io/core_extensions/FalseClass.html#method-i-to_b)** - Returns `false` if invoked on `FalseClass` instance.
+
 ### [NilClass](https://shivam091.github.io/core_extensions/NilClass.html)
 
-#### ***core_extensions/nil_class***
-1. **[`#blank?`](https://shivam091.github.io/core_extensions/NilClass.html#method-i-blank-3F)** - Returns `true` when invoked on `nil`.
+#### ***core_extensions/nil_class.rb***
+1. **[`#blank?`](https://shivam091.github.io/core_extensions/NilClass.html#method-i-blank-3F)** - Returns `true` if invoked on `NilClass` instance.
+2. **[`#to_b`](https://shivam091.github.io/core_extensions/NilClass.html#method-i-to_b)** - Returns `false` if invoked on `NilClass` instance.
 
 ### [Object](https://shivam091.github.io/core_extensions/Object.html)
 

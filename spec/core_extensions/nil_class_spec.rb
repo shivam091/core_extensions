@@ -6,8 +6,14 @@
 
 RSpec.describe NilClass do
   describe "#blank?" do
-    it "returns true if invoked on nil" do
+    it "returns true if invoked on NilClass instance" do
       expect(nil.blank?).to be_truthy
+    end
+  end
+
+  describe "#to_b" do
+    it "returns false if invoked on NilClass instance" do
+      expect(nil.to_b).to be_falsy
     end
   end
 end
