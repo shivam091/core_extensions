@@ -20,4 +20,13 @@ class FalseClass
   def to_b
     false
   end
+
+  # Returns +true+ if invoked on +FalseClass+ instance.
+  #
+  # ==== Examples
+  #
+  #   false.blank? #=> true
+  def blank?
+    true
+  end
 end

@@ -16,4 +16,10 @@ RSpec.describe FalseClass do
       expect(false.to_b).to be_falsy
     end
   end
+
+  describe "#blank?" do
+    it "returns true if invoked on FalseClass instance" do
+      expect(false.blank?).to be_truthy
+    end
+  end
 end
