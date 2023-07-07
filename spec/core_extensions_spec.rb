@@ -6,6 +6,6 @@
 
 RSpec.describe CoreExtensions do
   it "has a valid version number" do
-    expect(CoreExtensions::VERSION).to eq("0.1.2")
+    expect(CoreExtensions::VERSION).to eq("0.1.3")
   end
 end

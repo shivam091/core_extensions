@@ -1,3 +1,11 @@
+## [0.1.3](https://github.com/shivam091/core_extensions/compare/v0.1.2...v0.1.3) - 2023-07-07
+
+### What's new
+
+- Added core extension methods `hierarchy`, `lineage`, and `leaf_subclasses` in `Class`
+- Added extensions `to_i` and `to_b` in `TrueClass` and `FalseClass`
+- Added `to_b` core ext. in `NilClass`
+
 ## [0.1.2](https://github.com/shivam091/core_extensions/compare/v0.1.1...v0.1.2) - 2023-07-06
 
 ### What's new
