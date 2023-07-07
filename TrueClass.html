@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class NilClass - ActiveSupportExtended</title>
+<title>class TrueClass - ActiveSupportExtended</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -72,17 +72,17 @@
   <h3>Methods</h3>
 
   <ul class="link-list" role="directory">
-    <li ><a href="#method-i-blank-3F">#blank?</a>
     <li ><a href="#method-i-to_b">#to_b</a>
+    <li ><a href="#method-i-to_i">#to_i</a>
   </ul>
 </div>
 
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-NilClass">
-  <h1 id="class-NilClass" class="class">
-    class NilClass
+<main role="main" aria-labelledby="class-TrueClass">
+  <h1 id="class-TrueClass" class="class">
+    class TrueClass
   </h1>
 
   <section class="description">
@@ -100,34 +100,6 @@
          <h3>Public Instance Methods</h3>
        </header>
 
-      <div id="method-i-blank-3F" class="method-detail ">
-        <div class="method-header">
-          <div class="method-heading">
-            <span class="method-name">blank?</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-        </div>
-
-        <div class="method-description">
-          <p>Returns <code>true</code> if invoked on ‘NilClass` instance.</p>
-
-<h4 id="method-i-blank-3F-label-Examples">Examples<span><a href="#method-i-blank-3F-label-Examples">&para;</a> <a href="#top">&uarr;</a></span></h4>
-
-<pre class="ruby"><span class="ruby-keyword">nil</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-comment">#=&gt; true</span>
-</pre>
-
-          <div class="method-source-code" id="blank-3F-source">
-            <pre><span class="ruby-comment"># File core_extensions/nil_class.rb, line 9</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">blank?</span>
-  <span class="ruby-keyword">true</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-        </div>
-
-
-      </div>
-
       <div id="method-i-to_b" class="method-detail ">
         <div class="method-header">
           <div class="method-heading">
@@ -138,17 +110,45 @@
         </div>
 
         <div class="method-description">
-          <p>Returns <code>false</code> if invoked on <code>NilClass</code> instance.</p>
+          <p>Returns <code>true</code> if invoked on <code>TrueClass</code> instance.</p>
 
 <h4 id="method-i-to_b-label-Examples">Examples<span><a href="#method-i-to_b-label-Examples">&para;</a> <a href="#top">&uarr;</a></span></h4>
 
-<pre class="ruby"><span class="ruby-keyword">nil</span>.<span class="ruby-identifier">to_b</span> <span class="ruby-comment">#=&gt; false</span>
+<pre class="ruby"><span class="ruby-keyword">true</span>.<span class="ruby-identifier">to_b</span> <span class="ruby-comment">#=&gt; true</span>
 </pre>
 
           <div class="method-source-code" id="to_b-source">
-            <pre><span class="ruby-comment"># File core_extensions/nil_class.rb, line 18</span>
+            <pre><span class="ruby-comment"># File core_extensions/true_class.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_b</span>
-  <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-to_i" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">to_i</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Returns <code>1</code> if invoked on <code>TrueClass</code> instance.</p>
+
+<h4 id="method-i-to_i-label-Examples">Examples<span><a href="#method-i-to_i-label-Examples">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre class="ruby"><span class="ruby-keyword">true</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-comment">#=&gt; 1</span>
+</pre>
+
+          <div class="method-source-code" id="to_i-source">
+            <pre><span class="ruby-comment"># File core_extensions/true_class.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_i</span>
+  <span class="ruby-value">1</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
         </div>
